@@ -5,7 +5,7 @@ const atividade = [];
 const notas = [];
 const spanAprovado = '<span class = "resultado aprovado">Aprovado</span>'
 const spanReprovado = '<span class = "resultado reprovado">Reprovado</span>'
-const notaMinima = prompt("Digite a nota minima");
+const notaMinima = Number(prompt("Digite a nota minima"));
 
 let linhas = '';
 
@@ -32,7 +32,7 @@ function adicionalLinha(){
         let linha = '<tr>';
         linha += `<td>${inputNomeAtividade.value}</td>`;
         linha+=`<td>${inputNotaAtividade.value}</td> `;
-        linha+= `<td>${inputNotaAtividade.value >= notaMinima ? imgAprovado:imgReprovado}</td>`;
+        linha+= `<td>${Number(inputNotaAtividade.value) >= notaMinima ? imgAprovado:imgReprovado}</td>`;
         linha+= `</tr>`;
     
         linhas += linha;
